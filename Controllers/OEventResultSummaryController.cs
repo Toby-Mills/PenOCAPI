@@ -39,10 +39,15 @@ namespace WebAPI.Controllers
                                          {
                                              course = new Course
                                              {
-                                                 name = @course.strName,
-                                                 length = @course.intLength,
-                                                 climb = @course.intClimb,
-                                                 difficulty = @course.lutTechnical.strTechnical
+                                                 id = course.idCourse,
+                                                 eventId = course.intEvent,
+                                                 name = course.strName,
+                                                 length = course.intLength,
+                                                 climb = course.intClimb,
+                                                 controls = course.intControls,
+                                                 difficultyId = course.intTechnical,
+                                                 difficulty = course.lutTechnical.strTechnical,
+                                                 listOrder = course.intListOrder
                                              },
                                              results = (from @result in db.tblResult
                                                         orderby @result.intPosition
