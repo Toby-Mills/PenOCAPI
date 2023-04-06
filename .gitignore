@@ -3,3 +3,4 @@ obj/
 .vs
 packages
 Properties/PublishProfiles
+WebAPI.csproj.user
