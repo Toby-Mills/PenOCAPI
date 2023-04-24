@@ -54,6 +54,7 @@ namespace WebAPI.Controllers
                                                         where @result.intCourse == @course.idCourse
                                                         select new Result
                                                         {
+                                                            competitorId = result.intCompetitor,
                                                             competitor = @result.tblCompetitor.strReadOnlyFullName,
                                                             courseId = @result.intCourse,
                                                             position = @result.intPosition,
