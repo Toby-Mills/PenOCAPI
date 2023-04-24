@@ -80,6 +80,16 @@ namespace WebAPI.Controllers
             return Ok(queryResults.First());
         }
 
+        //---------------------------------------------------------------------------------
+        [HttpGet]
+        [Route("competitors/{idCompetitor}/results")]
+        public IHttpActionResult GetCompetitorResult(int idCompetitor)
+        {
+            IQueryable<Result> queryResults = QueryResults().Where(r =>  r.competitorId == idCompetitor);
+
+            return Ok(queryResults);
+        }
+
 
         //---------------------------------------------------------------------------------
         [HttpPut]
