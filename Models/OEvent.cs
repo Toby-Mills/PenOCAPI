@@ -30,5 +30,8 @@ namespace WebAPI.Models
         public string cost;
         public decimal? coordinateLatitude;
         public decimal? coordinateLongitude;
+        public string resultsURL;
+        public string photosURL;
+        public string noticeURL;
     }
 }

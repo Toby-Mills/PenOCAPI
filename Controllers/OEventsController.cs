@@ -45,7 +45,10 @@ namespace WebAPI.Controllers
                         organizingClub = @event.lutClub.strShortName,
                         cost = @event.strCost,
                         coordinateLatitude = @event.decCoordinateLat,
-                        coordinateLongitude = @event.decCoordinateLong
+                        coordinateLongitude = @event.decCoordinateLong,
+                        noticeURL = @event.strNotice,
+                        resultsURL = @event.strResults,
+                        photosURL = @event.strPhotos
                     }).OrderBy(@event => @event.date); //
         }
 
