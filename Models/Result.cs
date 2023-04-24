@@ -9,7 +9,11 @@ namespace WebAPI.Models
     {
         public int competitorId;
         public string competitor;
+        public int? eventId;
+        public string eventName;
+        public DateTime? eventDate;
         public int courseId;
+        public string courseName;
         public int? position;
         public DateTime? time;
         public int? categoryId;

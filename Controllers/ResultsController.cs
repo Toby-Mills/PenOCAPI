@@ -22,7 +22,11 @@ namespace WebAPI.Controllers
                     orderby result.intPosition
                     select new Result
                     {
+                        eventId = result.tblCourse.intEvent,
+                        eventName = result.tblCourse.tblEvent.strName,
+                        eventDate = result.tblCourse.tblEvent.dteDate,
                         courseId = result.intCourse,
+                        courseName = result.tblCourse.strName,
                         competitorId = result.intCompetitor,
                         competitor = result.tblCompetitor.strReadOnlyFullName,
                         categoryId = result.intCategory,
