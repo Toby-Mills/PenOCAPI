@@ -110,7 +110,10 @@ namespace WebAPI.Controllers
             strCost = oevent.cost,
             intMaxPoints = oevent.maxPoints,
             strPlannerReport = oevent.plannerReport,
-            intOrganisingClub = oevent.organizingClubId
+            intOrganisingClub = oevent.organizingClubId,
+            strResults = oevent.resultsURL,
+            strPhotos = oevent.photosURL,
+            strNotice = oevent.noticeURL
         };
 
             db.tblEvent.Add(eventRecord);
@@ -150,6 +153,9 @@ namespace WebAPI.Controllers
             eventRecord.strPlannerReport = oevent.plannerReport;
             eventRecord.strControllerReport = oevent.controllerReport;
             eventRecord.intOrganisingClub = oevent.organizingClubId;
+            eventRecord.strResults = oevent.resultsURL;
+            eventRecord.strPhotos = oevent.photosURL;
+            eventRecord.strNotice = oevent.noticeURL;
 
             db.SaveChanges();
 
